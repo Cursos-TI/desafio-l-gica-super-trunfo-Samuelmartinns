@@ -8,8 +8,13 @@
 int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
+    char ESTADO [30], CODIGO [30], CAP [30];
+    int populacao, point;
+    float area, pib;
+    char ESTADO2 [30], CODIGO2 [30], CAP2 [30];
+    int populacao2, point2;
+    float area2, pib2;
 
-    
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
     // utilizando a função scanf para capturar as entradas.
@@ -20,7 +25,43 @@ int main() {
     // scanf("%s", codigo);
     // 
     // (Repita para cada propriedade)
-
+     //perguntas da carta 1
+     printf("qual o estado? ");
+     scanf(" %s", ESTADO);
+     printf("qual o codigo? ");
+     scanf(" %s", CODIGO);
+     printf("qual a capital? ");
+     scanf(" %s", CAP);
+     printf("qual a população? ");
+     scanf("%d", &populacao);
+     printf("qual a área? ");
+     scanf("%f", &area);
+     printf("qual o PIB? ");
+     scanf("%f", &pib);
+     printf("quantos pontos turisticos? ");
+     scanf("%d", &point);
+     float denci, rendapercapita;
+    denci = populacao/area;
+    rendapercapita = pib/populacao;
+     //pergutas da carta 2
+     printf("qual o estado 2? ");
+     scanf(" %s", ESTADO2);
+     printf("qual o codigo? ");
+     scanf(" %s", CODIGO2);
+     printf("qual a capital? ");
+     scanf(" %s", CAP2);
+     printf("qual a população? ");
+     scanf(" %d", &populacao2);
+     printf("qual a área? ");
+     scanf("%f", &area2);
+     printf("qual o PIB? ");
+     scanf("%f", &pib2);
+     printf("quantos pontos turisticos? ");
+     scanf("%d", &point2);
+     float denci2, rendapercapita2;
+    denci2 = populacao2/area2;
+    rendapercapita2 = pib2/populacao2;
+    long double powercad1 = populacao + area + pib + point + rendapercapita + denci, powercad2 =populacao2 + area2 + pib2 + point2 + rendapercapita2 + denci2;
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
@@ -38,6 +79,13 @@ int main() {
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-
+    printf("\n compação dos atributos das cartas \n");
+    printf("carta 1 - (%s) tem a população de: %d\n", ESTADO,populacao);
+    printf("carta 2 - (%s) tem a população de: %d\n", ESTADO2,populacao2);
+    if(populacao>populacao2) {
+    printf("\ncarta 1 - (%s) venceu\n", ESTADO);
+    } else{
+    printf("\ncarta 2 - (%s) venceu\n", ESTADO2);
+    }
     return 0;
 }
