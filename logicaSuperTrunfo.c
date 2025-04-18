@@ -77,8 +77,54 @@ int main() {
     // Após realizar as comparações, exiba os resultados para o usuário.
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    int escolha;
+    printf("\n*** escolha da comparação das cartas ***\n");
+    printf("1. nome dos estados/países\n");
+    printf("2. atributo da população\n");
+    printf("3. atributo da área\n");
+    printf("4. atributo do PIB\n");
+    printf("5. atributo dos pontos turisticos\n");
+    printf("6. atributo da dencidade populacional\n");
+    printf("7. atributo da rendar per capita\n");
+    printf("qual desses é sua escolha");
+    scanf(" %d ", &escolha);
+
+
+    switch (escolha)
+    {
+    case 1:int nome;
+printf("1. primeira carta");
+printf("2. segunda carta");
+    printf("escolha qual nome da carta voce quer ver?");
+scanf(" %d ", &nome);
+    switch (nome)
+    {
+    case 1:
+        printf("o nome do estado/país da primeira carta é: %s \n", ESTADO);
+        break;
+    case 2:
+    printf("o nome do estado/país da segunda carta é: %s \n", ESTADO2);
+    break;
+    default:
+    printf("opção invalida");
+        break;
+       }
+        case 2:
+        printf("\n compação dos atributos das cartas \n");
+    printf("carta 1 - (%s) tem a população de: %d\n", ESTADO,populacao);
+    printf("carta 2 - (%s) tem a população de: %d\n", ESTADO2,populacao2);
+    if(populacao>populacao2) {
+    printf("\ncarta 1 - (%s) venceu\n", ESTADO);
+    } else{
+    printf("\ncarta 2 - (%s) venceu\n", ESTADO2);
+    }
+       break;
+    
+    default:
+        break;
+    }
+
+
     printf("\n compação dos atributos das cartas \n");
     printf("carta 1 - (%s) tem a população de: %d\n", ESTADO,populacao);
     printf("carta 2 - (%s) tem a população de: %d\n", ESTADO2,populacao2);
